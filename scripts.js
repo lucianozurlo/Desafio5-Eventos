@@ -26,12 +26,13 @@ asado.push(new CorteAsado("Costilla", cantCostilla, precioCostilla));
 asado.push(new CorteAsado("Entraña", cantEntrana, precioEntrana));
 asado.push(new CorteAsado("Carbón", 4, 20));
 
+
 //EVENTOS
 document.addEventListener('DOMContentLoaded', () => {
     total;
 })
-
-
+let btnCalcular = document.querySelector('#btnCalcular');
+btnCalcular.onclick = () => lista();
 
 
 //FUNCIONES
@@ -122,7 +123,8 @@ const lista = () => {
         console.log('¡No necesitás comprar nada!')
     }
 }
-lista();
+
+
 
 //CONSOLE
 console.log('*********************************************');
