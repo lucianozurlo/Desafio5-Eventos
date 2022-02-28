@@ -1,8 +1,6 @@
 //Chequeo si algún valor (peso x kilo o precio) no es un número. Si es así, lo convierte en 0
 const checkIsNAN = () => {
-    const mensaje = () => {
-        document.querySelector('#mensaje').innerHTML = 'Hay valores vacíos o no son números. Lo tomo como un 0.';
-    };
+    const mensaje = () => document.querySelector('#mensaje').innerHTML = 'Hay valores vacíos o no son números. Lo tomo como un 0.';
     for (const item of asado) {
         if (isNaN(item.peso)) {
             mensaje();
@@ -30,9 +28,6 @@ const checkIsNAN = () => {
 }
 
 //Construcción objeto CorteAsado
-//Declaramos el array asado
-
-asado = [];
 
 function CorteAsado(nombre, peso, preciokilo) {
     this.nombre = nombre;
@@ -42,6 +37,10 @@ function CorteAsado(nombre, peso, preciokilo) {
 }
 
 const calcularForm = () => {
+    //Declaramos el array asado
+    asado = []
+
+    //Definimos variables del array
     cantVacio = parseFloat(document.querySelector('#cantVacio').value);
     cantCostilla = parseFloat(document.querySelector('#cantCostilla').value);
     cantEntrana = parseFloat(document.querySelector('#cantEntrana').value);
