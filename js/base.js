@@ -1,6 +1,6 @@
 //Función que muestra resultado
 const lista = () => {
-
+    document.querySelector('#mensaje').innerHTML = '';
     calcularForm();
 
     //Declaro precios finales del asado
