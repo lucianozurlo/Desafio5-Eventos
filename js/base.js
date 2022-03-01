@@ -2,6 +2,7 @@
 const lista = () => {
     document.querySelector('#mensaje').innerHTML = '';
     calcularForm();
+    listado.innerHTML = "";
 
     //Declaro precios finales del asado
     precioVacioFinal = asado[0].preciototal;
